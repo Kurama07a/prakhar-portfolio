@@ -44,6 +44,7 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'parallax': 'parallax 20s linear infinite',
+        'fadeIn': 'fadeIn 0.5s ease-in-out',
       },
       keyframes: {
         float: {
@@ -57,6 +58,10 @@ module.exports = {
         parallax: {
           '0%': { transform: 'translateX(0px)' },
           '100%': { transform: 'translateX(-100px)' },
+        },
+        fadeIn: {
+          'from': { opacity: '0', transform: 'translateY(10px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
         }
       }
     },

@@ -1,7 +1,13 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const AboutSection: React.FC = () => {
+interface AboutSectionProps {
+  onViewProjects?: () => void;
+}
+
+const AboutSection: React.FC<AboutSectionProps> = ({ onViewProjects }) => {
   const constellationRef = useRef<HTMLCanvasElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const canvas = constellationRef.current;
@@ -140,17 +146,54 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
             
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-center p-6 rounded-xl bg-charcoal/50 backdrop-blur-sm border border-gold-accent/20 hover:border-gold-accent/40 transition-all">
-                <div className="text-3xl font-bold text-gold-accent mb-2">15+</div>
-                <div className="text-text-muted">Projects Built</div>
-              </div>
-              <div className="text-center p-6 rounded-xl bg-charcoal/50 backdrop-blur-sm border border-amber-glow/20 hover:border-amber-glow/40 transition-all">
-                <div className="text-3xl font-bold text-amber-glow mb-2">3+</div>
-                <div className="text-text-muted">Years Coding</div>
-              </div>
+            
+
+            {/* Action Links */}
+            <div className="flex items-center gap-8 mt-8">
+              {/* Know More Link */}
+              {onViewProjects && (
+                <button
+                  onClick={onViewProjects}
+                  className="group flex items-center gap-2 text-text-secondary hover:text-amber-glow transition-all duration-300 font-space text-lg"
+                >
+                  <span className="border-b border-transparent group-hover:border-amber-glow/60 transition-all duration-300">
+                    View my projects
+                  </span>
+                  <svg 
+                    className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              )}
+              
+              {/* Separator */}
+              <div className="w-px h-6 bg-text-muted/30"></div>
+              
+              {/* View Projects Link */}
+              <button
+                onClick={() => navigate('/beyond-code')}
+                className="group flex items-center gap-2 text-text-secondary hover:text-gold-accent transition-all duration-300 font-space text-lg"
+              >
+                <span className="border-b border-transparent group-hover:border-gold-accent/60 transition-all duration-300">
+                  Know more about me
+                </span>
+                <svg 
+                  className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+              
             </div>
+            
+            
           </div>
         </div>
       </div>

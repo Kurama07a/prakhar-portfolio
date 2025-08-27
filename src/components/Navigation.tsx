@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +30,25 @@ const Navigation: React.FC = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (sectionId === 'beyond') {
+      // Navigate to Beyond Code page
+      navigate('/beyond-code');
+      return;
+    }
+    
+    // If we're on the Beyond Code page, navigate back to home first
+    if (location.pathname === '/beyond-code') {
+      navigate('/');
+      // Add a small delay to allow navigation to complete before scrolling
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
+    
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
@@ -54,7 +76,13 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
-            onClick={() => scrollToSection('home')}
+            onClick={() => {
+              if (location.pathname === '/beyond-code') {
+                navigate('/');
+              } else {
+                scrollToSection('home');
+              }
+            }}
             className="font-space text-2xl font-bold text-ivory hover:text-gold-accent transition-colors"
           >
             Prakhar

@@ -1,10 +1,18 @@
 import React from 'react';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onViewWork?: () => void;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork }) => {
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    if (onViewWork) {
+      onViewWork();
+    } else {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -46,7 +54,7 @@ const HeroSection: React.FC = () => {
             className="group px-8 py-4 bg-gradient-to-r from-gold-accent to-amber-glow rounded-full font-space font-semibold text-lg text-space-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-gold-accent/40 drop-shadow-lg"
           >
             <span className="flex items-center gap-2">
-              View My Work
+              Learn More About Me
               <svg 
                 className="w-5 h-5 transition-transform group-hover:translate-x-1" 
                 fill="none" 
@@ -75,20 +83,6 @@ const HeroSection: React.FC = () => {
               Download Resume
             </span>
           </a>
-        </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="animate-bounce">
-            <svg 
-              className="w-6 h-6 text-text-muted drop-shadow-md" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
         </div>
       </div>
     </section>
