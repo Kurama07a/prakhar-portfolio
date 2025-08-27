@@ -5,19 +5,19 @@ const ContactSection: React.FC = () => {
     {
       name: 'GitHub',
       icon: '🐙',
-      url: 'https://github.com/prakhar',
+      url: 'https://github.com/kurama07a',
       description: 'Check out my code'
     },
     {
       name: 'LinkedIn',
       icon: '💼',
-      url: 'https://linkedin.com/in/prakhar',
+      url: 'https://www.linkedin.com/in/prakhar-shukla07a/',
       description: 'Connect professionally'
     },
     {
       name: 'Email',
       icon: '📧',
-      url: 'mailto:prakhar@example.com',
+      url: 'mailto:prakhar200803@gmail.com',
       description: 'Drop me a line'
     }
   ];

@@ -73,21 +73,7 @@ const Navigation: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <button
-            onClick={() => {
-              if (location.pathname === '/beyond-code') {
-                navigate('/');
-              } else {
-                scrollToSection('home');
-              }
-            }}
-            className="font-space text-2xl font-bold text-ivory hover:text-gold-accent transition-colors"
-          >
-            Prakhar
-          </button>
-
+        <div className="flex items-center justify-center">
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (

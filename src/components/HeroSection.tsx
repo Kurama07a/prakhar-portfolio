@@ -25,8 +25,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onViewWork }) => {
       <div className="stars absolute inset-0 opacity-50"></div>
       
       {/* Sophisticated dark overlay with ivory gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-space-dark/45 via-charcoal/80 to-slate-deep/100"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-space-dark/60 via-transparent to-space-dark/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-space-dark/35 via-charcoal/60 to-slate-deep/100"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-space-dark/50 via-transparent to-space-dark/50"></div>
       
       {/* Subtle warm glow for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gold-accent/5"></div>
