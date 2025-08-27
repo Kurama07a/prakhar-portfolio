@@ -39,6 +39,98 @@ const projects: Project[] = [
     status: 'Completed'
   },
   {
+    id: 'filesrus',
+    title: 'filesRus',
+    subtitle: 'CRISPR Club File Hosting Solution',
+    thumbnail: '/projects/filesrus-thumb.jpg',
+    description: 'A custom file hosting solution for the CRISPR FTP Server at IIITN. Provides secure storage and easy access for academic resources with a cleaner UI/UX than traditional FTP setups.',
+    problem: 'Students struggled with clunky traditional FTP interfaces, making it difficult to access and share academic resources efficiently within the club.',
+    solution: 'Developed a modern web-based file hosting platform with intuitive UI, secure authentication, and streamlined file management tailored for academic use.',
+    techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Multer', 'JWT'],
+    features: [
+      'Modern web-based file interface',
+      'Secure user authentication',
+      'File categorization and tagging',
+      'Search and filter functionality',
+      'Bulk upload and download',
+      'Access control and permissions',
+      'Usage analytics and monitoring'
+    ],
+    impact: 'Improved file accessibility for CRISPR Club members, reducing file retrieval time by 60% and increasing resource sharing engagement.',
+    github: 'https://github.com/prakhar/filesrus',
+    status: 'In Progress'
+  },
+  {
+    id: 'job-tracker',
+    title: 'Smart Job Tracker',
+    subtitle: 'Application Tracking Automation',
+    thumbnail: '/projects/job-tracker-thumb.jpg',
+    description: 'A tool that automatically tracks jobs you\'ve applied to or viewed. Scrapes emails and career portals to log applications, builds a timeline, and helps avoid duplicate applications.',
+    problem: 'Job hunting becomes chaotic when you lose track of where you\'ve applied, what stage applications are at, and end up applying to the same positions multiple times.',
+    solution: 'Built an automated tracking system that monitors email and career portals, extracts application data, and provides a centralized dashboard for job hunt management.',
+    techStack: ['Python', 'Beautiful Soup', 'Selenium', 'FastAPI', 'PostgreSQL', 'React'],
+    features: [
+      'Email scraping and parsing',
+      'Career portal integration',
+      'Automatic application detection',
+      'Timeline visualization',
+      'Duplicate prevention alerts',
+      'Application status tracking',
+      'Interview scheduling reminders',
+      'Analytics and insights'
+    ],
+    impact: 'Helps job seekers maintain organized application records, prevents duplicate applications, and provides clear visibility into job hunt progress.',
+    github: 'https://github.com/prakhar/smart-job-tracker',
+    status: 'In Progress'
+  },
+  {
+    id: 'receipt-reward',
+    title: 'Receipt Reward MVP',
+    subtitle: 'Gamified Expense Tracking',
+    thumbnail: '/projects/receipt-reward-thumb.jpg',
+    description: 'A backend prototype that turns receipts into points. Users upload pictures of receipts, the system parses them using OCR, tracks expenses, and gives reward points based on spending.',
+    problem: 'People find expense tracking boring and rarely maintain consistent spending records, missing opportunities for financial insights and rewards.',
+    solution: 'Created a gamified system that makes expense tracking engaging by converting receipt uploads into reward points and providing automatic expense categorization.',
+    techStack: ['FastAPI', 'Tesseract OCR', 'Python', 'OpenCV', 'SQLite', 'Pillow'],
+    features: [
+      'OCR receipt scanning',
+      'Automatic expense categorization',
+      'Points-based reward system',
+      'Spending analytics and insights',
+      'Monthly spending reports',
+      'Merchant recognition',
+      'Tax-deductible expense flagging',
+      'Budget goal tracking'
+    ],
+    impact: 'Proof of concept for gamifying expense tracking, making financial management more engaging while providing valuable spending insights.',
+    github: 'https://github.com/prakhar/receipt-reward',
+    status: 'MVP'
+  },
+  {
+    id: 'wellness-retreat',
+    title: 'Wellness Retreat Booking',
+    subtitle: 'Holistic Retreat Management System',
+    thumbnail: '/projects/wellness-retreat-thumb.jpg',
+    description: 'A comprehensive booking platform for wellness retreats featuring real-time availability, integrated payment processing, and personalized retreat recommendations.',
+    problem: 'Wellness retreat booking was fragmented across multiple platforms, making it difficult for users to compare options and for retreat centers to manage bookings efficiently.',
+    solution: 'Built an all-in-one platform that connects retreat seekers with centers, handles bookings, payments, and provides personalized recommendations based on user preferences.',
+    techStack: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
+    features: [
+      'Real-time availability calendar',
+      'Integrated payment processing',
+      'Personalized retreat matching',
+      'Review and rating system',
+      'Multi-language support',
+      'Mobile-responsive design',
+      'Retreat center dashboard',
+      'Automated email confirmations'
+    ],
+    impact: 'Streamlined the wellness retreat booking process, connecting over 50 retreat centers with wellness seekers and processing $100K+ in bookings.',
+    github: 'https://github.com/prakhar/wellness-retreat-booking',
+    demo: 'https://wellness-retreats-demo.com',
+    status: 'Completed'
+  },
+  {
     id: 'bonk',
     title: 'BONK',
     subtitle: 'Hostel Network Map & Monitor',
