@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 'ctrl-p',
     title: 'Ctrl P',
     subtitle: 'Smart Printing for Colleges',
-    thumbnail: '/projects/ctrl-p-thumb.jpg',
+    thumbnail: '/ctrlp.png',
     description: 'A cloud-based printing system designed for institutes. Instead of queueing at a printer, students upload files to a central portal, select a nearby print shop, and the system handles everything.',
     problem: 'Students had to physically queue at printers, leading to chaos, long wait times, and inefficient resource allocation across multiple print shops.',
     solution: 'Built a centralized cloud platform with intelligent job distribution, ETA prediction, and automatic load balancing across multiple printers per shop.',
@@ -35,14 +35,14 @@ const projects: Project[] = [
       'Analytics dashboard for admins'
     ],
     impact: 'Eliminated manual printing queues, reduced wait times by 80%, and provided valuable usage analytics to administrators.',
-    github: 'https://github.com/prakhar/ctrl-p',
+    demo  : 'https://ctrlp.co.in',
     status: 'Completed'
   },
   {
     id: 'filesrus',
     title: 'filesRus',
     subtitle: 'CRISPR Club File Hosting Solution',
-    thumbnail: '/projects/filesrus-thumb.jpg',
+    thumbnail: '/filesr.png',
     description: 'A custom file hosting solution for the CRISPR FTP Server at IIITN. Provides secure storage and easy access for academic resources with a cleaner UI/UX than traditional FTP setups.',
     problem: 'Students struggled with clunky traditional FTP interfaces, making it difficult to access and share academic resources efficiently within the club.',
     solution: 'Developed a modern web-based file hosting platform with intuitive UI, secure authentication, and streamlined file management tailored for academic use.',
@@ -57,14 +57,15 @@ const projects: Project[] = [
       'Usage analytics and monitoring'
     ],
     impact: 'Improved file accessibility for CRISPR Club members, reducing file retrieval time by 60% and increasing resource sharing engagement.',
-    github: 'https://github.com/prakhar/filesrus',
+    github: 'https://github.com/kurama07a/filesrus',
+    demo: 'https://filesrus.vercel.app',
     status: 'In Progress'
   },
   {
     id: 'job-tracker',
     title: 'Smart Job Tracker',
     subtitle: 'Application Tracking Automation',
-    thumbnail: '/projects/job-tracker-thumb.jpg',
+    thumbnail: '/jobtracker.png',
     description: 'A tool that automatically tracks jobs you\'ve applied to or viewed. Scrapes emails and career portals to log applications, builds a timeline, and helps avoid duplicate applications.',
     problem: 'Job hunting becomes chaotic when you lose track of where you\'ve applied, what stage applications are at, and end up applying to the same positions multiple times.',
     solution: 'Built an automated tracking system that monitors email and career portals, extracts application data, and provides a centralized dashboard for job hunt management.',
@@ -80,8 +81,73 @@ const projects: Project[] = [
       'Analytics and insights'
     ],
     impact: 'Helps job seekers maintain organized application records, prevents duplicate applications, and provides clear visibility into job hunt progress.',
-    github: 'https://github.com/prakhar/smart-job-tracker',
+    github: 'https://github.com/kurama07a/jobtracker',
     status: 'In Progress'
+  },
+  {
+    id: 'cosmic-collision',
+    title: 'Cosmic Collision',
+    subtitle: 'Multiplayer Space Shooter',
+    thumbnail: '/cc.png',
+    description: 'A real-time multiplayer space shooter with lobby/room systems and hybrid multiplayer architecture. Clients predict movement for smoothness, but server has final authority.',
+    problem: 'Wanted to understand multiplayer networking concepts and build something that balances responsiveness with fairness in real-time gameplay.',
+    solution: 'Implemented a hybrid client-server architecture with client-side prediction and server-side validation for optimal multiplayer experience.',
+    techStack: ['Node.js', 'WebSockets', 'Express', 'phaser.js', 'Docker'],
+    features: [
+      'Real-time multiplayer combat',
+      'Lobby and room management',
+      'Client-side prediction',
+      'Server authoritative gameplay',
+      'Lag compensation',
+      'Matchmaking system'
+    ],
+    impact: 'Successfully learned and implemented complex multiplayer networking concepts while creating an engaging gaming experience.',
+    github: 'https://github.com/kurama07a/cosmic-collision',
+    demo: 'https://cosmic-collision.onrender.com/',
+    status: 'Completed'
+  },
+  {
+    id: 'stargazer',
+    title: 'Stargazer',
+    subtitle: 'Social Media for Astronomers',
+    thumbnail: '/stargazer.png',
+    description: 'A niche platform for astronomy enthusiasts. Users can share telescope shots, annotate celestial events, and discover others stargazing in real time.',
+    problem: 'Astronomy enthusiasts lacked a dedicated platform to share observations, connect with fellow stargazers, and discover celestial events happening in real-time.',
+    solution: 'Building a specialized social platform with astronomy-focused features, real-time event tracking, and community-driven content.',
+    techStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS S3'],
+    features: [
+      'Telescope image sharing',
+      'Celestial event annotations',
+      'Real-time stargazing discovery',
+      'ISS tracking and notifications',
+      'Star map integration',
+      'Community discussions'
+    ],
+    impact: 'Currently developing the backend services and building a community of astronomy enthusiasts.',
+    github: 'https://github.com/kurama07a/stargazer',
+    demo: 'https://stargazerhub.vercel.app',
+    status: 'In Progress'
+  },
+  {
+    id: 'mythots',
+    title: 'MyThouts',
+    subtitle: 'Smart Diary & Habit Tracker',
+    thumbnail: '/thots.png',
+    description: 'A journaling and habit-tracking app designed as a digital flipbook. Each page feels like a diary entry you can flip through, with mood tracking and smart search.',
+    problem: 'Traditional habit trackers and journals felt clinical and boring, especially for people with ADHD who need more engaging, intuitive interfaces.',
+    solution: 'Created a tactile, flipbook-style interface that makes journaling feel natural and engaging, with integrated habit tracking.',
+    techStack: ['Next.js', 'SQLite', 'Tailwind CSS', 'Framer Motion'],
+    features: [
+      'Flipbook-style UI',
+      'Mood tracking integration',
+      'Habit logging system',
+      'Smart search functionality',
+      'ADHD-friendly design',
+      'Offline support'
+    ],
+    impact: 'Especially helpful for ADHD users, providing a less cluttered, more intuitive way to track habits and thoughts.',
+    github: 'https://github.com/prakhar/mythouts',
+    status: 'MVP'
   },
   {
     id: 'receipt-reward',
@@ -103,7 +169,7 @@ const projects: Project[] = [
       'Budget goal tracking'
     ],
     impact: 'Proof of concept for gamifying expense tracking, making financial management more engaging while providing valuable spending insights.',
-    github: 'https://github.com/prakhar/receipt-reward',
+    github: 'https://github.com/Kurama07a/Receipts-to-points-MVP',
     status: 'MVP'
   },
   {
@@ -126,8 +192,7 @@ const projects: Project[] = [
       'Automated email confirmations'
     ],
     impact: 'Streamlined the wellness retreat booking process, connecting over 50 retreat centers with wellness seekers and processing $100K+ in bookings.',
-    github: 'https://github.com/prakhar/wellness-retreat-booking',
-    demo: 'https://wellness-retreats-demo.com',
+    github: 'https://github.com/Kurama07a/Ahoum-booking-system-assignment',
     status: 'Completed'
   },
   {
@@ -148,7 +213,7 @@ const projects: Project[] = [
       'Automated network discovery'
     ],
     impact: 'Cut troubleshooting time by 70% and provided clear visibility into network performance across the hostel.',
-    github: 'https://github.com/prakhar/bonk',
+    github: 'https://github.com/Kurma07a/bonk-dashboard',
     status: 'Completed'
   },
   {
@@ -172,70 +237,7 @@ const projects: Project[] = [
     github: 'https://github.com/prakhar/youtube-seo',
     status: 'Completed'
   },
-  {
-    id: 'cosmic-collision',
-    title: 'Cosmic Collision',
-    subtitle: 'Multiplayer Space Shooter',
-    thumbnail: '/projects/cosmic-collision-thumb.jpg',
-    description: 'A real-time multiplayer space shooter with lobby/room systems and hybrid multiplayer architecture. Clients predict movement for smoothness, but server has final authority.',
-    problem: 'Wanted to understand multiplayer networking concepts and build something that balances responsiveness with fairness in real-time gameplay.',
-    solution: 'Implemented a hybrid client-server architecture with client-side prediction and server-side validation for optimal multiplayer experience.',
-    techStack: ['Unity', 'C#', 'Node.js', 'WebSockets', 'Docker'],
-    features: [
-      'Real-time multiplayer combat',
-      'Lobby and room management',
-      'Client-side prediction',
-      'Server authoritative gameplay',
-      'Lag compensation',
-      'Matchmaking system'
-    ],
-    impact: 'Successfully learned and implemented complex multiplayer networking concepts while creating an engaging gaming experience.',
-    github: 'https://github.com/prakhar/cosmic-collision',
-    demo: 'https://cosmic-collision-demo.com',
-    status: 'Completed'
-  },
-  {
-    id: 'stargazer',
-    title: 'Stargazer',
-    subtitle: 'Social Media for Astronomers',
-    thumbnail: '/projects/stargazer-thumb.jpg',
-    description: 'A niche platform for astronomy enthusiasts. Users can share telescope shots, annotate celestial events, and discover others stargazing in real time.',
-    problem: 'Astronomy enthusiasts lacked a dedicated platform to share observations, connect with fellow stargazers, and discover celestial events happening in real-time.',
-    solution: 'Building a specialized social platform with astronomy-focused features, real-time event tracking, and community-driven content.',
-    techStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS S3'],
-    features: [
-      'Telescope image sharing',
-      'Celestial event annotations',
-      'Real-time stargazing discovery',
-      'ISS tracking and notifications',
-      'Star map integration',
-      'Community discussions'
-    ],
-    impact: 'Currently developing the backend services and building a community of astronomy enthusiasts.',
-    github: 'https://github.com/prakhar/stargazer',
-    status: 'In Progress'
-  },
-  {
-    id: 'mythots',
-    title: 'MyThots',
-    subtitle: 'Smart Diary & Habit Tracker',
-    thumbnail: '/projects/mythots-thumb.jpg',
-    description: 'A journaling and habit-tracking app designed as a digital flipbook. Each page feels like a diary entry you can flip through, with mood tracking and smart search.',
-    problem: 'Traditional habit trackers and journals felt clinical and boring, especially for people with ADHD who need more engaging, intuitive interfaces.',
-    solution: 'Created a tactile, flipbook-style interface that makes journaling feel natural and engaging, with integrated habit tracking.',
-    techStack: ['Next.js', 'SQLite', 'Tailwind CSS', 'Framer Motion'],
-    features: [
-      'Flipbook-style UI',
-      'Mood tracking integration',
-      'Habit logging system',
-      'Smart search functionality',
-      'ADHD-friendly design',
-      'Offline support'
-    ],
-    impact: 'Especially helpful for ADHD users, providing a less cluttered, more intuitive way to track habits and thoughts.',
-    github: 'https://github.com/prakhar/mythots',
-    status: 'MVP'
-  }
+  
 ];
 
 const ProjectModal: React.FC<{ project: Project; isOpen: boolean; onClose: () => void }> = ({
